@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TicTacToe</title>
+</head>
+<body>
+    <div id="startPage">
+        <h1 id="title">TIC TAC TOE</h1>
+        <div>Choose who starts first.</div>
+        <div id="buttons1">
+            <button id="xButton">X</button>
+            <button id="oButton">O</button>
+        </div>
+    </div>
+    <div id="container">
+        <h1 id="title">TIC TAC TOE</h1>
+        <div id="playerTurn"></div>
+        <div id="subContainer">
+            <div class="score">X<hr><span id="xScore"></span></div>
+            <div id="board"></div>
+            <div class="score">O<hr><span id="oScore"></span></div>
+        </div>
+        <div id="buttons" class="hide">
+            <button id="prev">PREVIOUS</button>
+            <button id="next">NEXT</button></br>
+            <button id="reset">RESET</button>
+        </div>
+        <div id="winner1" class="hide">
+            <p>X Wins!</p>
+        </div>
+        <div id="winner2" class="hide">
+            <p>O Wins!</p>
+        </div>
+        <div id="gameDraw" class="hide">
+            <p>GAME OVER: TIE</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
