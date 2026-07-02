@@ -3,40 +3,61 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
 		<title>TicTacToe</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
 	</head>
+
 	<body>
+		<!-- Theme Toggle -->
+		<button id="themeToggle" title="Toggle Theme">
+			<span class="sun">☀️</span>
+			<span class="moon">🌙</span>
+		</button>
+		
+		<!-- Start Screen Overlay -->
 		<div id="startPage">
-			<h1 id="title">TIC TAC TOE</h1>
-			<div>Choose who starts first.</div>
-			<div id="buttons1">
+			<h1>TIC TAC TOE</h1>
+			<p>Choose who starts first</p>
+			<div class="start-buttons">
 				<button id="xButton">X</button>
 				<button id="oButton">O</button>
 			</div>
 		</div>
-		<div id="container">
+		
+		<!-- Main Game Container -->
+		<div class="game-container">
 			<h1 id="title">TIC TAC TOE</h1>
-			<div id="playerTurn"></div>
+
+			<!-- Scoreboard & Turn Indicator -->
 			<div id="subContainer">
-				<div class="score">X<hr><span id="xScore"></span></div>
-				<div id="board"></div>
-				<div class="score">O<hr><span id="oScore"></span></div>
+				<div class="score-box x-score">
+					<span class="score-label">Player X</span>
+					<span class="score" id="xScore">0</span>
+				</div>
+					<div id="playerTurn">X is playing</div>
+				<div class="score-box o-score">
+					<span class="score-label">Player O</span>
+					<span class="score" id="oScore">0</span>
+				</div>
 			</div>
+
+			<!-- Game Board -->
+			<div id="board"></div>
+
+			<!-- Replay Controls -->
 			<div id="buttons" class="hide">
 				<button id="prev">PREVIOUS</button>
-				<button id="next">NEXT</button></br>
 				<button id="reset">RESET</button>
+				<button id="next">NEXT</button></br>
 			</div>
-			<div id="winner1" class="hide">
-				<p>X Wins!</p>
-			</div>
-			<div id="winner2" class="hide">
-				<p>O Wins!</p>
-			</div>
-			<div id="gameDraw" class="hide">
-				<p>GAME OVER: TIE</p>
-			</div>
+
+			<!-- Game Over Messages -->
+			<div id="winner1" class="hide message x-win">X Wins!</div>
+			<div id="winner2" class="hide message o-win">O Wins!</div>
+			<div id="gameDraw" class="hide message draw">GAME OVER: TIE</div>
 		</div>
 
 		<script src="script.js"></script>
