@@ -34,12 +34,19 @@ oScore.innerHTML = oWin;
 // 3. THEME TOGGLE LOGIC (Dark/Light Mode)
 
 themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-theme');
-    localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+	document.body.classList.toggle('light-theme');
+	const isLight = document.body.classList.contains('light-theme');
+	localStorage.setItem('theme', isLight ? 'light' : 'dark');
+	const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+	if(themeColorMeta) {
+		themeColorMeta.setAttribute('content', isLight ? '#f0f4f8' : '#0b0f19');
+	}
 });
 
 if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-theme');
+	document.body.classList.add('light-theme');
+	const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+	if(themeColorMeta) themeColorMeta.setAttribute('content', '#f0f4f8');
 }
 
 
